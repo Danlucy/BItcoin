@@ -123,9 +123,7 @@ class _CryptoCardState extends State<CryptoCard> {
           await coinData.getCoinData(widget.selectedCurrency!);
       print(mapData['${widget.type}']);
       data = await mapData['${widget.type}'];
-      String? inString = data?.toStringAsFixed(2);
-      double inDouble = double.parse(inString!);
-      value = inDouble;
+      value = data;
     } catch (e) {
       print(e);
     }
